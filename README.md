@@ -10,7 +10,15 @@ a time-sensitive personalized local differential privacy-based Federated Learnin
 ## Deployment
 
 ### Install the environment
-``
+```
 pip install -r requirements.txt
-``
-The experiment is based on Pytorch and [Opacus](https://opacus.ai/). After installing the Opacus, we need to modify the file ``PrivacyEngine``
+```
+The experiment is based on Pytorch and [Opacus](https://opacus.ai/). After installing the Opacus, we need to modify the file ``PrivacyEngine``, and add the following code to the end of the file ``PrivacyEngine``.
+```
+    def set_clip(self,new_clip):
+        self.max_grad_norm = new_clip
+        self.clipper.norm_clipper.flat_value = new_clip
+
+    def set_unit_sigma(self,unit_sigma):
+        self.noise_multiplier = unit_sigma
+```
