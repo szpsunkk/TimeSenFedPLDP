@@ -210,3 +210,11 @@ The parameter meaning:
 --epsilin: the parameter of differential privacy, [0,10]
 
 ```
+
+### The results:
+#### The test accuracy of iid and noniid settings with mnist and fmnist dataset
+![image](https://github.com/szpsunkk/TimeSenFedPLDP/assets/47681094/f27a6ab3-9c6d-4ccc-8424-33aa562c47d8)
+#### The test accuracy of different privacy budgets:
+![image](https://github.com/szpsunkk/TimeSenFedPLDP/assets/47681094/407ba3ea-e261-4b5e-89b3-427aba07c7b7)
+
+
